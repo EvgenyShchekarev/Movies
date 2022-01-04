@@ -1,4 +1,4 @@
-package com.schekarev.movies.view
+package com.schekarev.movies.view.main
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.schekarev.movies.model.Movie
+import com.schekarev.movies.model.entity.Movie
 import com.schekarev.movies.R
 import com.squareup.picasso.Picasso
 
@@ -40,6 +40,7 @@ class MainAdapter(private val onListItemClickListener: OnListItemClickListener) 
                     .get()
                     .load(data.imageUrl)
                     .into(itemView.findViewById<ImageView>(R.id.image_view))
+
                 itemView.setOnClickListener { openInNewWindow(data) }
             }
         }

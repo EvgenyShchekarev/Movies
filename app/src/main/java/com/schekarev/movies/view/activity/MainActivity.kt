@@ -1,7 +1,8 @@
-package com.schekarev.movies.view
+package com.schekarev.movies.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.schekarev.movies.R
 
 class MainActivity : AppCompatActivity() {

@@ -1,6 +1,8 @@
 package com.schekarev.movies.application
 
 import android.app.Application
+import android.util.Log
+import com.schekarev.movies.di.addMovieScreen
 import com.schekarev.movies.di.application
 import com.schekarev.movies.di.mainScreen
 import org.koin.android.ext.koin.androidContext
@@ -12,7 +14,7 @@ class MoviesApp : Application() {
         super.onCreate()
         startKoin {
             androidContext(applicationContext)
-            modules(application, mainScreen)
+            modules(application, mainScreen, addMovieScreen)
         }
     }
 }

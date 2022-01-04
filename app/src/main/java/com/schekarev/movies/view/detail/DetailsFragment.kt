@@ -1,4 +1,4 @@
-package com.schekarev.movies.view
+package com.schekarev.movies.view.detail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

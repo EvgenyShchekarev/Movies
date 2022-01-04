@@ -10,4 +10,15 @@
     <string name="dialog_tittle_sorry">Sorry</string>
     <string name="empty_server_response_on_success">Couldn\'t find any definitions</string>
     <string name="error_stub">Error</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_movie">Add Movie</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="tagline">Tagline</string>
+    <string name="cast">Cast</string>
+    <string name="rating">Rating</string>
+    <string name="save_movie">Save Movie</string>
+    <string name="movie_url">Movie URL</string>
+    <string name="image_url">Image URL</string>
 </resources>

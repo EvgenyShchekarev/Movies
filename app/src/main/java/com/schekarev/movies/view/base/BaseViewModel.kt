@@ -1,4 +1,4 @@
-package com.schekarev.movies.view
+package com.schekarev.movies.view.base
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -26,7 +26,7 @@ abstract class BaseViewModel<T : AppState>(
         viewModelCoroutineScope.coroutineContext.cancelChildren()
     }
 
-    abstract fun getData(isOnline: Boolean)
+    abstract fun getData()
 
     abstract fun handlerError(throwable: Throwable)
 }

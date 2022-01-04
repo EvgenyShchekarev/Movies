@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="@color/purple_600"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="10dp"
+    tools:context=".view.add_movie.AddMovieFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="@string/add_movie"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/color_white_transparent"
+                android:backgroundTint="@color/purple_600">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/title_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/purple_600"
+                    android:textColor="@color/white"
+                    android:hint="@string/title"
+                    android:textColorHint="@color/white"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/color_white_transparent"
+                android:backgroundTint="@color/purple_600">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/description_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/purple_600"
+                    android:textColor="@color/white"
+                    android:hint="@string/description"
+                    android:textColorHint="@color/white"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/color_white_transparent"
+                android:backgroundTint="@color/purple_600">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tagline_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/purple_600"
+                    android:textColor="@color/white"
+                    android:hint="@string/tagline"
+                    android:textColorHint="@color/white"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/color_white_transparent"
+                android:backgroundTint="@color/purple_600">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cast_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/purple_600"
+                    android:textColor="@color/white"
+                    android:hint="@string/cast"
+                    android:textColorHint="@color/white"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/color_white_transparent"
+                android:backgroundTint="@color/purple_600">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/year_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/purple_600"
+                    android:textColor="@color/white"
+                    android:hint="Год"
+                    android:textColorHint="@color/white"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/color_white_transparent"
+                android:backgroundTint="@color/purple_600">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/rating_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/purple_600"
+                    android:textColor="@color/white"
+                    android:hint="@string/rating"
+                    android:textColorHint="@color/white"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/color_white_transparent"
+                android:backgroundTint="@color/purple_600">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/image_url_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/purple_600"
+                    android:textColor="@color/white"
+                    android:hint="@string/image_url"
+                    android:textColorHint="@color/white"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/color_white_transparent"
+                android:backgroundTint="@color/purple_600">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/movie_url_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/purple_600"
+                    android:textColor="@color/white"
+                    android:hint="@string/movie_url"
+                    android:textColorHint="@color/white"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:text="@string/save_movie"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>

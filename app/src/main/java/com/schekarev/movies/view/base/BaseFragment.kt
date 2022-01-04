@@ -1,39 +1,25 @@
-package com.schekarev.movies.view
+package com.schekarev.movies.view.base
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.schekarev.movies.model.AppState
-import com.schekarev.movies.model.Movie
 import com.schekarev.movies.R
 import com.schekarev.movies.databinding.LoadingLayoutBinding
-import com.schekarev.movies.utils.network.isOnline
+import com.schekarev.movies.model.AppState
+import com.schekarev.movies.model.entity.Movie
 import com.schekarev.movies.utils.ui.AlertDialogFragment
+import com.schekarev.movies.view.InteractorGet
 
 private const val DIALOG_FRAGMENT_TAG = "74a54328-5d62-46bf-ab6b-cbf5d8c79522"
 
-abstract class BaseFragment<T : AppState, I : Interactor<T>> : Fragment() {
+abstract class BaseFragment<T : AppState, I : InteractorGet<T>> : Fragment() {
 
     private lateinit var binding: LoadingLayoutBinding
     abstract val model: BaseViewModel<T>
-    protected var isNetworkAvailable: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        context?.let {
-            isNetworkAvailable = isOnline(it)
-        }
-    }
-
-    override fun onResume() {
-        super.onResume()
         binding = LoadingLayoutBinding.inflate(layoutInflater)
-        context?.let {
-            isNetworkAvailable = isOnline(it)
-        }
-        if (!isNetworkAvailable && isDialogNoll()) {
-            showNoInternetConnectionDialog()
-        }
     }
 
     protected fun renderData(appState: T) {
@@ -41,6 +27,7 @@ abstract class BaseFragment<T : AppState, I : Interactor<T>> : Fragment() {
             is AppState.Success -> {
                 showViewWorking()
                 appState.data?.let {
+                    it as List<Movie>
                     if (it.isEmpty()) {
                         showAlertDialog(
                             getString(R.string.dialog_tittle_sorry),

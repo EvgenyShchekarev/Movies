@@ -7,20 +7,40 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.schekarev.movies.view.MainFragment"
+        android:name="com.schekarev.movies.view.main.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/navigateToDetailFragment"
-            app:destination="@id/detailsFragment" />
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/navigateToAddMovieFragment"
+            app:destination="@id/addMovieFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.schekarev.movies.view.DetailsFragment"
+        android:name="com.schekarev.movies.view.detail.DetailsFragment"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" >
         <action
             android:id="@+id/navigateToMainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMovieFragment"
+        android:name="com.schekarev.movies.view.add_movie.AddMovieFragment"
+        android:label="fragment_add_movie"
+        tools:layout="@layout/fragment_add_movie" >
+        <action
+            android:id="@+id/navigateToMainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
     </fragment>
 </navigation>

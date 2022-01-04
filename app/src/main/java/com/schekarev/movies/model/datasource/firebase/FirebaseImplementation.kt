@@ -35,20 +35,4 @@ class FirebaseImplementation : DataSourceFirebase<List<Movie?>> {
             moviesReference.document(it.id!!).set(movie)
         }
     }
-
-    class SaveListMovie {
-
-        private var _movies: List<Movie>
-
-        init {
-            _movies = ArrayList()
-        }
-
-        fun save(movies: List<Movie>) {
-            this._movies = movies
-        }
-        fun get() : List<Movie?> {
-            return _movies
-        }
-    }
 }
